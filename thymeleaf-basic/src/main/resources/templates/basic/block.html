@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+	<th:block th:each="user : ${users}">
+		<div>
+			사용자 이름1 <span th:text="${user.username}"></span> 
+			사용자 나이1 <span th:text="${user.age}"></span>
+		</div>
+		<div>
+			요약 <span th:text="${user.username} + ' / ' + ${user.age}"></span>
+		</div>
+	</th:block>
+</body>
+</html>
+실행 결과
+<div>
+	사용자 이름1 <span>userA</span> 
+	사용자 나이1 <span>10</span>
+</div>
+<div>
+	요약 <span>userA / 10</span>
+</div>
+<div>
+	사용자 이름1 <span>userB</span> 
+	사용자 나이1 <span>20</span>
+</div>
+<div>
+	요약 <span>userB / 20</span>
+</div>
+<div>
+	사용자 이름1 <span>userC</span> 
+	사용자 나이1 <span>30</span>
+</div>
+<div>
+	요약 <span>userC / 30</span>
+</div>
